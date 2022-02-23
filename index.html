@@ -8,29 +8,31 @@
 <body>
     <div class="bg-image"></div>
     <div class="window-bg">
-        <div class="front-img"></div>
-        <div class="titlediv">
-            <div id=titleb>welcome to the internet...</div>
-            <div id="clock"></div>
-        </div>
-        <div class="windowbackgroundarea1">
-            <div id="Subtitle">> echo "have a nice day."</div>
-        </div>
-        <div class="windowbackgroundarea2">
-            <div class="centerDivs">
-                <div class="category">
-                    <div class="categorytitle">> Work </div>
-                    <div class="categorycontent"><a href="https://gmail.com/">gmail</a> - <a
-                            href="https://outlook.office.com/mail/inbox">outlook</a> - <a
-                            href="https://purdue.brightspace.com/d2l/login?">brightspace</a></div>
-                    <div class="categorytitle">> Rec</div>
-                    <div class="categorycontent"><a href="https://music.youtube.com/">youtube</a> - <a
-                            href="https://reddit.com/">reddit</a> - <a href="4chan.org/g">/g</a></div>
-                    <div class="categorytitle">> Dev</div>
-                    <div class="categorycontent"><a href="https://gitlab.com">gitlab</a> - <a
-                            href="https://stackoverflow.com">stackoverflow</a> - <a
-                            href="https://leetcode.com">leetcode</a></div>
-                    <!-- <div class="categorytitle">Sources</div> -->
+        <div class="window-wrapper">
+            <div class="front-img"></div>
+            <div class="titlediv">
+                <div id=titleb>welcome to the internet...</div>
+                <div id="clock"></div>
+            </div>
+            <div class="windowbackgroundarea1">
+                <div id="Subtitle">> cat bookmarks.txt | ./Firefox76.3 </div>
+            </div>
+            <div class="windowbackgroundarea2">
+                <div class="centerDivs">
+                    <div class="category">
+                        <div class="categorytitle">> Work </div>
+                        <div class="categorycontent"><a href="https://gmail.com/">gmail</a> - <a
+                                href="https://outlook.office.com/mail/inbox">outlook</a> - <a
+                                href="https://purdue.brightspace.com/d2l/login?">brightspace</a></div>
+                        <div class="categorytitle">> Rec</div>
+                        <div class="categorycontent"><a href="https://music.youtube.com/">youtube</a> - <a
+                                href="https://reddit.com/">reddit</a> - <a href="4chan.org/g">/g</a></div>
+                        <div class="categorytitle">> Dev</div>
+                        <div class="categorycontent"><a href="https://gitlab.com">gitlab</a> - <a
+                                href="https://stackoverflow.com">stackoverflow</a> - <a
+                                href="https://leetcode.com">leetcode</a></div>
+                        <!-- <div class="categorytitle">Sources</div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,6 +40,9 @@
     <div class="pixeloverlay"></div>
     <div class="vignette"></div>
     <script>
+        // check if window0--bg div is center aligned and console.log offset
+        // if not, center align it
+        // if yes, console.log offset
         var clock = document.getElementById("clock");
         function updateClock() {
             var date = new Date();

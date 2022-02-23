@@ -4,7 +4,7 @@
 --windowbackground: rgba(45, 46, 45,.5);        /*The color of the background of the main window main area.*/
 --maintextcolor:rgb(78, 255, 61);               /*The color of the text in the main area.*/
 --headercolor:rgb(211, 211, 211);                 /*The color of the text in the header/title.*/
---linktextcolor:rgb(211, 211, 211);  /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
+--linktextcolor:rgb(255, 255, 255);  /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
 --backgroundImageUrl:url("resources/images/background.jpg");  /*The URL to the image you want to use as background.*/
 --focusImageUrl:url("resources/images/wave.png");   /*The URL to the image you want to use for the foreground.*/
 --backgroundBlur:blur(2px);                           /*Change how blurry the background is. Higher number is more blurry.*/
@@ -15,8 +15,8 @@
 /* These are the font sizes for every element with text respectively:*/
 --windowtitlefontsize:17px;           /*Font size used by the window title and clock*/
 --windowsubtitlefontsize:17px;        /*Font size used by the subtitle*/
---categorytitlefontsize:25px;         /*Font size used by the category titles*/
---categorycontentfontsize:15px;       /*Font size used by the category contents*/
+--categorytitlefontsize:35px;         /*Font size used by the category titles*/
+--categorycontentfontsize:25px;       /*Font size used by the category contents*/
 
 /* The following settings are for the pixel overlay effect:*/
 --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
@@ -45,14 +45,25 @@
     width: 960px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     position: absolute;
-    transform: scale(.65);
-    -moz-transform: scale(0.65);
-    top: 10%;
-    left: 10%;
+    /*center align div to window responsiove*/
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
     /* transform-origin: 50% 0 0; */
 }
+
+.window-wrapper{
+    height: 485px;
+    width: 960px;
+    position: absolute;
+    /*center align div to window responsiove*/
+    transform: scale(.70);
+    -moz-transform: scale(0.70);
+}
+
 #clock{
   text-align: right;
   position: relative;

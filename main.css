@@ -1,10 +1,10 @@
 /*Most easy/basic changes can be done up here in the root area, edit the rest if you know what it does.*/
 :root{
---stripebackground:#e2c8d4;         /*The color of the small stripe just under the header*/
---windowbackground: #d0a4af;        /*The color of the background of the main window main area.*/
---maintextcolor:#000;               /*The color of the text in the main area.*/
---headercolor:#fff;                 /*The color of the text in the header/title.*/
---linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
+--stripebackground:#202020;         /*The color of the small stripe just under the header*/
+--windowbackground: rgba(45, 46, 45,.5);        /*The color of the background of the main window main area.*/
+--maintextcolor:rgb(78, 255, 61);               /*The color of the text in the main area.*/
+--headercolor:rgb(211, 211, 211);                 /*The color of the text in the header/title.*/
+--linktextcolor:rgb(211, 211, 211);  /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
 --backgroundImageUrl:url("resources/images/background.jpg");  /*The URL to the image you want to use as background.*/
 --focusImageUrl:url("resources/images/wave.png");   /*The URL to the image you want to use for the foreground.*/
 --backgroundBlur:blur(2px);                           /*Change how blurry the background is. Higher number is more blurry.*/
@@ -20,7 +20,7 @@
 
 /* The following settings are for the pixel overlay effect:*/
 --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
---pixeloverlay-itensity:0.1;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+--pixeloverlay-itensity:0.05;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
 --pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
 /* The following setting are for the vignette overlay effect:*/
@@ -32,8 +32,8 @@
 
 .bg-image {
     background-image: var(--backgroundImageUrl);
-    filter: var(--backgroundBlur);
-    -webkit-filter: var(--backgroundBlur);
+    /* filter: var(--backgroundBlur);
+    -webkit-filter: var(--backgroundBlur); */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,9 +47,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: scale(.65);
+    -moz-transform: scale(0.65);
+    top: 10%;
+    left: 10%;
+    /* transform-origin: 50% 0 0; */
 }
 #clock{
   text-align: right;
@@ -65,6 +67,7 @@
   width: 100%;
 }
 .front-img{
+  background-color:var(--windowbackground);
   position: inherit;
   width: 339px;
   height: 446px;
@@ -72,7 +75,7 @@
   top:34px;
   background-image:var(--focusImageUrl);
   background-position: center;
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
 }
 .titlediv{
@@ -118,7 +121,7 @@
   height:100%;
   width: 100%;
   display:table-cell;
-  vertical-align:middle;
+  vertical-align:top;
   position: relative;
   top: -20px; /*This is a bit hacky, but since each title has a top margin of 20px, the whole text is misaligned by 20px downwards. This compensates for that.*/
 }
@@ -126,17 +129,19 @@
   font-size: var(--categorytitlefontsize);
   font-weight: normal;
   width:605px;
-  text-align: center;
+  text-align: left;
   position: relative;
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-left: 10px;
 }
 .categorycontent{
   font-size: var(--categorycontentfontsize);
   width:605px;
   position:relative;
-  text-align: center;
+  text-align: left;
   font-weight: lighter;
   margin-top: 5px;
+  margin-left: 10px;
 }
 .pixeloverlay{
   width: 100%;

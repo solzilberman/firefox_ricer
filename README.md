@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Startpage
 
 A small script to generate a startpage written in Python.
@@ -119,3 +120,11 @@ The third image is a cut out and edited version of the window from an image that
 
 ## Font
 The font used is the [W95FA font by FontsArena](https://fontsarena.com/w95fa-by-fontsarena/) and is licenced under a SIL OpenFont licence.
+=======
+# firefox_ricer
+custom startup/newtab html page for firefox 2022
+
+personal new tab starter -- using github as server.
+
+script ref: https://github.com/IAmBaut/startpage.py
+>>>>>>> ede6cd220d25fb08c284d50ed655ef916b3359e1

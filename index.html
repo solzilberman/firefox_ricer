@@ -21,16 +21,25 @@
                 <div class="centerDivs">
                     <div class="category">
                         <div class="categorytitle">> Work </div>
-                        <div class="categorycontent"><a href="https://gmail.com/">gmail</a> - <a
-                                href="https://outlook.office.com/mail/inbox">outlook</a> - <a
-                                href="https://purdue.brightspace.com/d2l/login?">brightspace</a></div>
-                        <div class="categorytitle">> Rec</div>
-                        <div class="categorycontent"><a href="https://youtube.com/">youtube</a> - <a
-                                href="https://reddit.com/">reddit</a> - <a href="https://4chan.org/g">/g</a></div>
+                        <div class="categorycontent"><a href="https://gmail.com/"> <i
+                                    style="font-size: small; color: aqua;">1</i> gmail</a> - <a
+                                href="https://outlook.office.com/mail/inbox"><i
+                                    style="font-size: small; color: aqua;">2</i> outlook</a> - <a
+                                href="https://purdue.brightspace.com/d2l/login?"><i
+                                    style="font-size: small; color: aqua;">3</i> brightspace</a></div>
                         <div class="categorytitle">> Dev</div>
-                        <div class="categorycontent"><a href="https://gitlab.com">gitlab</a> - <a
-                                href="https://stackoverflow.com">stackoverflow</a> - <a
-                                href="https://leetcode.com">leetcode</a></div>
+                        <div class="categorycontent"><a href="https://gitlab.com"><i
+                                    style="font-size: small; color: aqua;">5</i> gitlab</a> - <a
+                                href="https://stackoverflow.com"><i style="font-size: small; color: aqua;">6</i>
+                                stackoverflow</a> - <a href="https://leetcode.com"><i
+                                    style="font-size: small; color: aqua;">7</i> leetcode</a>
+                        </div>
+                        <div class="categorytitle">> Rec</div>
+                        <div class="categorycontent"><a href="https://youtube.com/"><i
+                                    style="font-size: small; color: aqua;">8</i> youtube</a> - <a
+                                href="https://reddit.com/"><i style="font-size: small; color: aqua;">9</i> reddit</a> -
+                            <a href="https://4chan.org/g"><i style="font-size: small; color: aqua;">10</i> /g</a>
+                        </div>
                         <!-- <div class="categorytitle">Sources</div> -->
                     </div>
                 </div>
@@ -43,6 +52,14 @@
         // check if window0--bg div is center aligned and console.log offset
         // if not, center align it
         // if yes, console.log offset
+        document.addEventListener('keydown', function (e) {
+            kp = parseInt(e.key);
+            var a = document.querySelectorAll('a');
+            var len_a = a.length;
+            if (kp != NaN && kp <= len_a && kp > 0) {
+                a[kp - 1].click();
+            }
+        });
         var clock = document.getElementById("clock");
         function updateClock() {
             var date = new Date();
